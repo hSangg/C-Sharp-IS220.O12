@@ -9,12 +9,12 @@ namespace Program
             //Câu 1
             double r, circumference;
             string stringR;
-            Console.Write("Nhap vao duong kinh hinh tron: ");
+            Console.Write("\n\nNhap vao ban kinh duong tron: ");
             stringR = Console.ReadLine();
             r = double.Parse(stringR);
-            Console.WriteLine(r);
+            Console.WriteLine($"Ban kinh cua hinh tron: {r}");
             circumference = r * 2 * Math.PI;
-            Console.WriteLine(circumference);
+            Console.WriteLine($"Chu vi duong tron do la: {circumference}");
 
             //Câu 3
             int day, month, year;
