@@ -51,7 +51,9 @@ namespace Lab2_Bai1
                 Console.WriteLine($"Đơn giá: {DonGia}vnd");
             }
 
-            public virtual void XuatthongtinKHtheoThangNam() { }
+            public virtual void XuatthongtinKHtheoThangNam() {
+                Console.WriteLine("------------------------------------------");
+            }
         }
 
         class SinhHoat : KhachHang
@@ -78,10 +80,13 @@ namespace Lab2_Bai1
 
             public override void XuatthongtinKHtheoThangNam()
             {
+                base.XuatthongtinKHtheoThangNam();
                 Console.WriteLine($"Mã khách hàng: {MaKH}");
                 Console.WriteLine($"Tên khách hàng: {TenKH}");
                 Console.WriteLine($"Số lượng điện đã dùng: {SLDien}kwh");
                 Console.WriteLine($"Thành tiền: {TinhThanhTien()}vnd");
+                Console.WriteLine("------------------------------------------");
+
             }
 
             public override double TinhThanhTien() 
@@ -123,10 +128,12 @@ namespace Lab2_Bai1
             }
             public override void XuatthongtinKHtheoThangNam()
             {
+                base.XuatthongtinKHtheoThangNam();
                 Console.WriteLine($"Mã khách hàng: {MaKH}");
                 Console.WriteLine($"Tên khách hàng: {TenKH}");
                 Console.WriteLine($"Số lượng điện đã dùng: {SLDien}kwh");
                 Console.WriteLine($"Thành tiền: {TinhThanhTien()}vnd");
+                Console.WriteLine("------------------------------------------");
             }
         }
 
@@ -165,12 +172,57 @@ namespace Lab2_Bai1
             }
             public override void XuatthongtinKHtheoThangNam()
             {
+                base.XuatthongtinKHtheoThangNam();
                 Console.WriteLine($"Mã khách hàng: {MaKH}");
                 Console.WriteLine($"Tên khách hàng: {TenKH}");
                 Console.WriteLine($"Số lượng điện đã dùng: {SLDien}kwh");
-                Console.Write($"Thành tiền: {TinhThanhTien()}vnd");
+                Console.WriteLine($"Thành tiền: {TinhThanhTien()}vnd");
+                Console.WriteLine("------------------------------------------");
             }
 
+        }
+
+        static bool KiemTraNgayThangNam(int day, int month, int year)
+        {
+            if (month > 12 || month < 1)
+                return false;
+            switch (month)
+            {
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 8:
+                case 10:
+                case 12:
+                    if (day < 1 || day > 31)
+                        return false;
+                    break;
+                case 4:
+                case 6:
+                case 9:
+                case 11:
+                    if (day < 1 || day > 30)
+                        return false;
+                    break;
+                default:
+                    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+                    {
+                        if (day < 1 || day > 29)
+                        {
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        if (day < 1 || day > 28)
+                        {
+                            return false;
+                        }
+                    }
+                    break;
+            }
+            return true;
         }
 
         static int KiemtraNhap(string idkh, string name, int day, int month, int year, List<KhachHang> kh, int LoaiDien)
@@ -211,7 +263,7 @@ namespace Lab2_Bai1
             int ngay, thang, nam, loaidien;
             double soLuongDien, donGia, dinhMuc;
             KhachHang dskh;
-            int kiemtra;
+            int kiemtraNgay, kiemtraKH;
             int choice;
             while(true)
             {
@@ -233,6 +285,18 @@ namespace Lab2_Bai1
                     thang = Int32.Parse(Console.ReadLine());
                     Console.Write("Nhập năm tạo hoá đơn: ");
                     nam = Int32.Parse(Console.ReadLine());
+                    if(KiemTraNgayThangNam(ngay, thang, nam) == false)
+                    {
+                        kiemtraNgay = kiemtraKH = 0;
+                        soLuongDien = donGia = 0;
+                        choice = 0;
+                        Console.WriteLine("Ngày tháng năm không hợp lệ");
+                        continue;
+                    }
+                    else
+                    {
+                        kiemtraNgay = 1;
+                    }
                     Console.Write("Nhập số lượng điện đã dùng: ");
                     soLuongDien = double.Parse(Console.ReadLine());
                     Console.Write("Nhập đơn giá: ");
@@ -240,8 +304,8 @@ namespace Lab2_Bai1
                     Console.Write("Chọn kiểu khách hàng: \n\t1: Sinh hoạt\n\t2: Kinh doanh\n\t3: San xuat\n");
                     Console.Write("Nhap su lua chon cua ban: ");
                     choice = int.Parse(Console.ReadLine());
-                    kiemtra = KiemtraNhap(maKH, tenKH, ngay, thang, nam, kh, choice);
-                } while (kiemtra == 0);
+                    kiemtraKH = KiemtraNhap(maKH, tenKH, ngay, thang, nam, kh, choice);
+                } while (kiemtraKH == 0 || kiemtraNgay == 0);
 
                 switch (choice)
                 {
@@ -260,26 +324,14 @@ namespace Lab2_Bai1
                         {
                             Console.Write("Nhập loại điện: ");
                             loaidien = Int32.Parse(Console.ReadLine());
-                        } while (loaidien < 2 && loaidien > 3);
+                        } while (loaidien < 2 || loaidien > 3);
                         dskh = new SanXuat(3, maKH, tenKH, ngay, thang, nam, soLuongDien, donGia, 0, loaidien);
                         break; 
                     default:
                         break;
                 }
             }
-
-            //foreach (var khachHang in kh)
-            //{
-            //    khachHang.XuatKhanhHang();
-            //    Console.WriteLine("\n---------------------------\n");
-            //}
         }
-
-        //static void implement()
-        //{
-        //    List<KhachHang> danhSachKhachHang = new List<KhachHang>();
-        //    Nhap(danhSachKhachHang);
-        //}
 
         static void XuatHoaDonTheoThangNam(int thang, int nam, List<KhachHang> kh)
         {
