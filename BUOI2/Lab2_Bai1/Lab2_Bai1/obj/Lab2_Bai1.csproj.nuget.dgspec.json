@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\LabUniversity\\Lab2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj": {}
+    "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\C-Sharp-IS220.O12\\BUOI2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj": {}
   },
   "projects": {
-    "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\LabUniversity\\Lab2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj": {
+    "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\C-Sharp-IS220.O12\\BUOI2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\LabUniversity\\Lab2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj",
+        "projectUniqueName": "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\C-Sharp-IS220.O12\\BUOI2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj",
         "projectName": "Lab2_Bai1",
-        "projectPath": "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\LabUniversity\\Lab2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj",
+        "projectPath": "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\C-Sharp-IS220.O12\\BUOI2\\Lab2_Bai1\\Lab2_Bai1\\Lab2_Bai1.csproj",
         "packagesPath": "C:\\Users\\GIA KIET\\.nuget\\packages\\",
-        "outputPath": "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\LabUniversity\\Lab2\\Lab2_Bai1\\Lab2_Bai1\\obj\\",
+        "outputPath": "D:\\KIET's Folder\\CODE\\UIT\\Third_year\\Semester 1\\IS220_Buliding_application_on_frameworks\\Practice\\C-Sharp-IS220.O12\\BUOI2\\Lab2_Bai1\\Lab2_Bai1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\GIA KIET\\AppData\\Roaming\\NuGet\\NuGet.Config",

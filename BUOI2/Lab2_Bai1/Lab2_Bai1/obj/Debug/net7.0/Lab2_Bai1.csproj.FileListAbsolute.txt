@@ -1,0 +1,15 @@
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\bin\Debug\net7.0\Lab2_Bai1.exe
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\bin\Debug\net7.0\Lab2_Bai1.deps.json
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\bin\Debug\net7.0\Lab2_Bai1.runtimeconfig.json
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\bin\Debug\net7.0\Lab2_Bai1.dll
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\bin\Debug\net7.0\Lab2_Bai1.pdb
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.csproj.AssemblyReference.cache
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.GeneratedMSBuildEditorConfig.editorconfig
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.AssemblyInfoInputs.cache
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.AssemblyInfo.cs
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.csproj.CoreCompileInputs.cache
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.dll
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\refint\Lab2_Bai1.dll
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.pdb
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\Lab2_Bai1.genruntimeconfig.cache
+D:\KIET's Folder\CODE\UIT\Third_year\Semester 1\IS220_Buliding_application_on_frameworks\Practice\C-Sharp-IS220.O12\BUOI2\Lab2_Bai1\Lab2_Bai1\obj\Debug\net7.0\ref\Lab2_Bai1.dll
