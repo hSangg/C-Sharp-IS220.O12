@@ -1,0 +1,96 @@
+﻿@model IEnumerable<CshartpLab5.Models.Monan>
+@inject IHttpContextAccessor context;
+@{
+    ViewData["Title"] = "Order";
+}
+
+<h1>Order</h1>
+
+<h3>Hello @context.HttpContext.Session.GetString("name")</h3>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form method="post" asp-action="PlaceOrder">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.TENMA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model=>model.DONGIA)
+                </th>
+                <th>
+                    @Html.DisplayName("Mon an kem")
+                </th>
+                <th>
+                    @Html.DisplayName("Quantity")
+                </th>
+
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model )
+            {
+                @if (item.LOAIMA != "topping") {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.TENMA)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DONGIA)
+                        </td>
+                        <td>
+                            <select name="kem" class="kem">
+                                <option value="none">Chọn món ăn kèm</option>
+                                @foreach (var ITEM in Model)
+                                {
+                                    @if (ITEM.LOAIMA == "topping") {
+                                        <option value="@ITEM.MAMA" data-dongia="@ITEM.DONGIA">@ITEM.TENMA</option>
+                                    }
+                                }
+                            </select>
+                    </td>
+                    <td>
+                        <input type="number" name="Quantity" class="quantity" value="0" min="0" data-dongia="@item.DONGIA" oninput="updateSubtotal(this)"  />
+                        <input type="hidden" name="MAMA" value="@item.MAMA" />
+                    </td>
+                </tr>
+                }
+            }
+        </tbody>
+    </table>
+    <div>
+        <label>Tạm tính: </label>
+        <input name="total" id="total" readonly></input>
+    </div>
+    <input type="submit" value="Đặt món">
+</form>
+<h2>Ghi chú</h2>
+<input type="text" />
+<script>
+    document.querySelectorAll('.kem').forEach(function (input) {
+        input.addEventListener('oninput', updateSubtotal)
+    })
+    function updateSubtotal() {
+        var rows = document.querySelectorAll('.quantity');
+        var total = 0;
+
+        rows.forEach(function (row) {
+            var quantity = parseInt(row.value);
+            var dongia = parseFloat(row.getAttribute('data-dongia'));
+            console.log(quantity);
+            console.log(dongia)
+            var subtotal = quantity * dongia;
+            var monKem = document.querySelector('.kem');
+            var selectedOption = monKem.options[monKem.selectedIndex];
+            var dongia2 = selectedOption.getAttribute('data-dongia');
+            var subtotal2 = dongia2 * quantity;
+            total += subtotal + subtotal2;
+            console.log(total);
+        });
+
+        document.getElementById('total').value = total.toFixed(2);
+    }
+</script>

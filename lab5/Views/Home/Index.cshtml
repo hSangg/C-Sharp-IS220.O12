@@ -1,0 +1,13 @@
+﻿
+@inject IHttpContextAccessor contxt;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <ul>
+        <li>User Name: @contxt.HttpContext.Session.GetString("name") </li>
+        <li>User Id: @contxt.HttpContext.Session.GetString("makh") </li>
+    </ul>
+</div>

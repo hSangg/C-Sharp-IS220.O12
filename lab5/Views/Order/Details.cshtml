@@ -1,0 +1,80 @@
+﻿@model CshartpLab5.Models.HOADON
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>HOADON</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayName("Mã đơn hàng: ")
+        </dt>
+        <dd class="col-sm-10" id="maHoaDon">
+            @Html.DisplayFor(model => model.MAHD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Tổng tiền: ")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.THT)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Ngày hoá đơn: ")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NGAYHD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayName("Khách hàng: ")
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MAKH)
+        </dd>
+    </dl>
+</div>
+<div id="container">
+
+</div>
+<div>   
+    <a asp-action="Index" asp-controller="Customer">Back to List</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script> 
+    var container = document.getElementById('container')
+    var mahd = document.getElementById("maHoaDon").innerText;
+    console.log(mahd)
+    $.ajax({
+        url: "Order/ListMon",
+        type: 'GET',
+        data: {
+            MAHD: mahd
+        },
+        success: function(data){
+            container.innerHTML = data
+                var rows = document.querySelectorAll('tbody tr')
+                rows.forEach(function (row) {
+                    var mama = row.querySelector('.monan .mama').value;
+                    $.ajax({
+                        url: "/Order/Monan",
+                        type: "GET",
+                        data: {
+                            MAMA: mama
+                        },
+                        success: function (data) {
+                            console.log(data)
+                            row.querySelector('.dongia').innerHTML=(data.dongia)
+                            row.querySelector('.monan').innerHTML=(data.tenma)
+                            var sl = parseInt(row.querySelector('.sl').innerHTML);
+                            row.querySelector('.thanhtien').innerHTML = data.dongia * sl;
+                        }
+                    })
+                })
+                
+        }
+    })
+</script>

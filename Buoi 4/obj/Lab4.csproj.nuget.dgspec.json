@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\backendTtech\\Lab4\\Lab4.csproj": {}
+    "E:\\backendTtech\\C-Sharp-IS220.O12\\Buoi 4\\Lab4.csproj": {}
   },
   "projects": {
-    "D:\\backendTtech\\Lab4\\Lab4.csproj": {
+    "E:\\backendTtech\\C-Sharp-IS220.O12\\Buoi 4\\Lab4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\backendTtech\\Lab4\\Lab4.csproj",
+        "projectUniqueName": "E:\\backendTtech\\C-Sharp-IS220.O12\\Buoi 4\\Lab4.csproj",
         "projectName": "Lab4",
-        "projectPath": "D:\\backendTtech\\Lab4\\Lab4.csproj",
+        "projectPath": "E:\\backendTtech\\C-Sharp-IS220.O12\\Buoi 4\\Lab4.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "D:\\backendTtech\\Lab4\\obj\\",
+        "outputPath": "E:\\backendTtech\\C-Sharp-IS220.O12\\Buoi 4\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

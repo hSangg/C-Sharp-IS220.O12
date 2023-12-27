@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CshartpLab5.Models.HOADON>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<form>
+    <label>Khách hàng</label>
+    <div>
+        @Html.DropDownList("SelectedCustomer", ViewBag.customer as SelectList, "-- Select Customer --", new { id = "customerDropdown"})
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("STT")
+            </th>
+            <th>
+                @Html.DisplayName("Đơn hàng")
+            </th>
+            <th>
+                @Html.DisplayName("Ngày HD")
+            </th>
+            <th>
+                @Html.DisplayName("Chức năng")
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="detail">
+       
+    </tbody>
+</table>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+    document.getElementById('customerDropdown').addEventListener('change', function () {
+        var selectedID = this.value;
+        var count = 0;
+        document.getElementById('detail').innerHTML="";
+        $.ajax({
+            url: '/Customer/GetDetails',
+            type: 'GET',
+            data: {
+                selectedId: selectedID
+            },
+            success: function (data) {
+                document.getElementById('detail').innerHTML = data;
+                var links = document.querySelectorAll('.delete')
+                links.forEach(link => {
+                    link.addEventListener('click', function handleClick(e) {
+                        var mahd = this.getAttribute("data-mahd")
+                        var rowToDelete = this.closest("tr");
+                        $.ajax({
+                            url: '/Customer/Delete',
+                            type: 'POST',
+                            data: {
+                                MAHD: mahd
+                            },
+                            success: function (data) {
+                                rowToDelete.remove();
+                            },
+                            error: function () {
+                                console.log('Đã có lỗi khi lấy dữ liệu từ server.');
+                            }
+                        });
+                    });
+                });
+            },
+            error: function () {
+                console.log('Đã có lỗi khi lấy dữ liệu từ server.');
+            }
+        });
+    })
+</script>

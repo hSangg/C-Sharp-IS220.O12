@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CshartpLab5", "CshartpLab5.csproj", "{4FA1FB50-05AF-4081-AC6B-01DA22C3D24D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FA1FB50-05AF-4081-AC6B-01DA22C3D24D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FA1FB50-05AF-4081-AC6B-01DA22C3D24D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FA1FB50-05AF-4081-AC6B-01DA22C3D24D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FA1FB50-05AF-4081-AC6B-01DA22C3D24D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54157562-8F1A-4589-822E-73865AFF6362}
+	EndGlobalSection
+EndGlobal

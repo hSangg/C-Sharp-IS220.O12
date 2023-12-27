@@ -1,0 +1,54 @@
+﻿@model IEnumerable<CshartpLab5.Models.CTHD>
+
+@{
+    ViewData["Title"] = "ListMon";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayName("Món ăn")
+            </th>
+            <th>
+                @Html.DisplayName("Món ăn kèm")
+            </th>
+            <th>
+                @Html.DisplayName("Số lượng")
+            </th>
+            <th>
+                @Html.DisplayName("Mã hoá đơn")
+            </th>
+            <th>
+                @Html.DisplayName("Đơn giá")
+            </th>
+            <th>
+                @Html.DisplayName("Thành tiền")
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="monan">
+                <input hidden class="mama" value=@item.MAMA>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAK)
+            </td>
+            <td class="sl">
+                @Html.DisplayFor(modelItem => item.SL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MAHD)
+            </td>
+             <td class="dongia">
+                
+            </td>
+            <td class="thanhtien">
+
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

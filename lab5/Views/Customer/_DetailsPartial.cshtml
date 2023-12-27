@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CshartpLab5.Models.HOADON>
+@{
+    var count = 1;
+}
+
+@foreach (var item in Model)
+{
+    <tr>
+        <td>
+            @count
+        </td>
+        <td class="cthd">
+            <a asp-action="Details" asp-controller="Order" asp-route-id="@item.MAHD" style="color: black">@item.MAHD</a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAYHD)
+        </td>
+        <td>
+            <a class="delete" data-mahd="@item.MAHD" href="#">xoá</a>
+        </td>
+    </tr>
+    count++;
+}
